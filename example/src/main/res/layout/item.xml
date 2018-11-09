@@ -1,51 +1,37 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!--
-   Copyright (C) 2012 Lucas Rocha
-
-   Licensed under the Apache License, Version 2.0 (the "License");
-   you may not use this file except in compliance with the License.
-   You may obtain a copy of the License at
-
-       http://www.apache.org/licenses/LICENSE-2.0
-
-   Unless required by applicable law or agreed to in writing, software
-   distributed under the License is distributed on an "AS IS" BASIS,
-   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-   See the License for the specific language governing permissions and
-   limitations under the License.
--->
-
-<com.owen.tvrecyclerview.example.RoundAngleFrameLayout
+<com.owen.tvrecyclerview.example.RoundFrameLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:layout_width="370dp"
-    android:layout_height="130dp"
-    app:ral_radius="0dp"
-    android:clickable="true"
+    android:layout_width="match_parent"
+    android:layout_height="130pt"
+    android:background="@color/item_default_color"
+    app:rfl_radius="10pt"
     android:focusable="true"
-    android:focusableInTouchMode="true"
-    >
-    
-    <FrameLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="@drawable/item_background">
+    android:clickable="true">
 
         <ImageView
             android:id="@+id/image"
+            android:scaleType="centerCrop"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:src="@drawable/ic_launcher"/>
+            android:layout_height="match_parent"/>
 
         <TextView
             android:id="@+id/title"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:gravity="center"
             android:textColor="@android:color/holo_green_dark"
-            android:textSize="22sp"
+            android:layout_marginLeft="10pt"
+            android:layout_marginRight="10pt"
+            android:textSize="28pt"
             android:textStyle="bold"/>
+        
+        <TextView
+            android:id="@+id/tv_changed"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textColor="@android:color/holo_green_dark"
+            android:gravity="bottom|right"
+            android:padding="10pt"
+            android:textSize="20pt"/>
 
-    </FrameLayout>
-
-</com.owen.tvrecyclerview.example.RoundAngleFrameLayout>
+</com.owen.tvrecyclerview.example.RoundFrameLayout>
